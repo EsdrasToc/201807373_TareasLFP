@@ -1,3 +1,13 @@
 Lenguajes imperativos y declarativos
 
-	Imperativos:
+	Imperativos: son todos aquellos en los cuales se le dice COMO hacer un proceso.
+
+	Declarativos: son todos aquellos en donde simplemente decimos QUE hacer.
+
+		Ejemplo:
+		Si nos imaginamos un formulario, en un lenguaje imperativo nosotros tendriamos que encargarnos de
+		decirle al programa como tomar los datos (a travez de cuadros de texto u otros componentes) y a
+		donde llevar esta informacion luego de eso.
+
+		Mientras que con un lenguaje declarativo, simplemente dariamos la orden y el programa se encargaria
+		de solicitar los datos y llevarlos a el lugar que les corresponde.
