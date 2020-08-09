@@ -1,1 +1,3 @@
 Lenguajes imperativos y declarativos
+
+	Imperativos:
