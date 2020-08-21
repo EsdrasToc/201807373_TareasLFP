@@ -1,0 +1,26 @@
+<registros>
+    <estudiante>
+        <nombre>Esdras</nombre>
+        <apellido>Toc</apellido>
+        <edad>20</edad>
+        <carnet>201807373</carnet>
+    </estudiante>
+    <estudiante>
+        <nombre>Cecilia</nombre>
+        <apellido>Osorio</apellido>
+        <edad>20</edad>
+        <carnet>201801579</carnet>
+    </estudiante>
+    <estudiante>
+        <nombre>Brian</nombre>
+        <apellido>Erazo</apellido>
+        <edad>21</edad>
+        <carnet>201803468</carnet>
+    </estudiante>
+    <estudiante>
+        <nombre>Christian</nombre>
+        <apellido>Arreaga</apellido>
+        <edad>22</edad>
+        <carnet>201802158</carnet>
+    </estudiante>
+</registros>

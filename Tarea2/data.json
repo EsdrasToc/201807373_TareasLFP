@@ -1,0 +1,28 @@
+{
+    "clientes": [
+        {
+            "nombre": "Esdras",
+            "apellido": "Toc",
+            "edad": 20,
+            "carnet": 201807373
+        },
+        {
+            "nombre": "Cecilia",
+            "apellido": "Osorio",
+            "edad": 20,
+            "carnet": 201805847
+        },
+        {
+            "nombre": "Brian",
+            "apellido": "Erazo",
+            "edad": 22,
+            "carnet": 201803256
+        },
+        {
+            "nombre": "Christian",
+            "apellido": "Arreaga",
+            "edad": 22,
+            "carnet": 201808516
+        }
+    ]
+}
