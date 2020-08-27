@@ -5,6 +5,11 @@ import calcFunctions
 continue_condition = True
 count_condition= False
 
+with open('auxiliar.json', "r") as f:
+    text=f.read()
+    if text!="":
+        count_condition=True
+
 data = {}
 data['']=['']
 
@@ -20,8 +25,8 @@ while continue_condition:
             path=path.replace(',',"")
             path=path.replace(' ', "")
             try:
-                data = IOfunctions.readJson(path)
-                count_condition= True
+                data = IOfunctions.readJson(path, count_condition)
+                count_condition = True
             except:
                 print('OCURRIO UN ERROR CON '+path)
             
