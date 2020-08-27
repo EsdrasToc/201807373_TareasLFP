@@ -5,20 +5,53 @@ import calcFunctions
 continue_condition = True
 count_condition= False
 
-with open('auxiliar.json', "r") as f:
-    text=f.read()
-    if text!="":
-        count_condition=True
+with open('auxiliar.json', "w") as f:
+    f.write("")
 
 data = {}
 data['']=['']
 
 while continue_condition:
-
     texto = input("$")
 
     if re.match("(S|s)(E|e)(L|l)(E|e)(C|c)(T|t)", texto) != None:
-        print('select')
+        reader = texto.split()
+        registros = []
+        switch= False
+        switch2 = False
+        condition= None
+        find=None
+        for i in reader:
+
+            if i == '*':
+                registros=None
+                continue
+            
+            if re.match("(D|d)(O|o)(N|n)(D|d)(E|e)",i) != None:
+                switch= True
+                find=''
+                continue
+            
+            if re.match("(S|s)(E|e)(L|l)(E|e)(C|c)(T|t)", i) != None:
+                continue
+
+            if switch == False:
+                registros.append(i.replace(',',""))
+            else:
+                if switch2==False:
+                    condition = i
+                    switch2=True
+                else:
+                    if i=='=':
+                        continue
+                    else:
+                        print(find)
+                        find=find+i.replace('"',"")
+        try:
+            IOfunctions.printJsonWC(data, registros, condition, find)
+        except:
+            print('Ha ocurrido un error')
+
     elif re.match("(C|c)(A|a)(R|r)(G|g)(A|a)(R|r)", texto) != None:
         for i in re.finditer("(( )+.*.json,)|(( )+.*json)", texto):
             path = '{!r}'.format(texto[i.start():i.end()])
@@ -29,8 +62,7 @@ while continue_condition:
                 count_condition = True
             except:
                 print('OCURRIO UN ERROR CON '+path)
-            
-        IOfunctions.printJson(data)
+
     elif re.match("(M|m)(A|a)(X|x)(I|i)(M|m)(O|o)", texto) != None:
         
         if re.search("(P|p)(R|r)(O|o)(M|m)(E|e)(D|d)(I|i)(O|o)",texto) != None:
@@ -66,5 +98,7 @@ while continue_condition:
 
     elif re.match("(E|e)(X|x)(I|i)(T|t)", texto) != None:
         continue_condition = False
+        with open('auxiliar.json', "w") as f:
+            f.write("")
     else:
         print('comando no valido')
